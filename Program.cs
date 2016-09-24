@@ -13,6 +13,8 @@ namespace ConsoleApplication
 	        var host = new WebHostBuilder()
             .UseKestrel()
             .UseStartup<Startup>()
+            .UseContentRoot()
+            .UseUrls("http://localhost:8080")
             .Build();	
 
             host.Run();      
